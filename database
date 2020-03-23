@@ -1,0 +1,33 @@
+-- create table
+
+
+CREATE TABLE cats
+    (
+        cat_id INT NOT NULL AUTO_INCREMENT,
+        name VARCHAR(100),
+        age INT,
+        PRIMARY KEY(cat_id)
+    );
+ 
+ 
+-- run sql file in terminal 
+mysql-ctl cli
+ 
+use cat_app;
+ 
+source first_file.sql
+ 
+DESC cats;
+ 
+
+-- insert data into table
+ 
+INSERT INTO cats(name, age)
+VALUES('Charlie', 17);
+ 
+INSERT INTO cats(name, age)
+VALUES('Connie', 10);
+ 
+SELECT * FROM cats;
+ 
+source testing/insert.sql
