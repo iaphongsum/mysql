@@ -21,3 +21,13 @@ function generateAddress(){
 }
 
 generateAddress()
+
+-- connect node js to mysql database "join_us"
+
+var mysql = require('mysql');
+ 
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',     // your root username
+  database : 'join_us'   // the name of your db
+});
