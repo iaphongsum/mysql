@@ -1,3 +1,6 @@
+-- run node js file on terminal * must run in the folder of the js file
+node app.js
+
 -- install node js
 sudo apt-get install npm
 
