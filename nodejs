@@ -1,0 +1,5 @@
+-- install node js
+sudo apt-get install npm
+
+-- install faker
+npm install faker
