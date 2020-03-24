@@ -30,6 +30,7 @@ function generateAddress(){
 generateAddress()
 
 -- connect node js to mysql database "join_us"
+-- step-by-steyp: https://github.com/mysqljs/mysql 
 
 var mysql = require('mysql');
  
