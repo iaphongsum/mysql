@@ -53,6 +53,8 @@ connection.query(q, function (error, results, fields) {
   console.log(results[0].now);
 });
 
+connection.end();
+
 -- if the above js not working, try reboot mysql by "sudo service mysql start" in the CL
 -- to debug, see:
 -- https://stackoverflow.com/questions/50093144/mysql-8-0-client-does-not-support-authentication-protocol-requested-by-server
