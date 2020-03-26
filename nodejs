@@ -37,6 +37,8 @@ generateAddress()
 -- connect node js to mysql database "join_us"
 -- step-by-steyp: https://github.com/mysqljs/mysql 
 
+
+
 var mysql = require('mysql');
  
 var connection = mysql.createConnection({
@@ -71,6 +73,16 @@ connection.query(q, function (error, results, fields) {
   console.log(results[0].date);
   console.log(results[0].now);
 });
+
+-- select count(*)
+
+var q = 'SELECT COUNT(*) AS total FROM users';
+
+connection.query(q, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results);
+});
+
 
 connection.end();
 
