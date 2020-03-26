@@ -58,6 +58,7 @@ var q = 'SELECT * FROM users';
 connection.query(q, function (error, results, fields) {
   if (error) throw error;
   console.log(results);
+  // console.log(results[1].email);
 });
 
 -- select time function 
