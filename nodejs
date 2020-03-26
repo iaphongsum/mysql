@@ -14,6 +14,11 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'y
 mysql> FLUSH PRIVILEGES;
 mysql> quit
 
+-- when login in mysql, type:
+root@goorm > mysql --password
+password: password
+
+
 -- run faker function with js file
 
 var faker = require('faker');
