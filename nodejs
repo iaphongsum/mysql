@@ -59,6 +59,7 @@ connection.query(q, function (error, results, fields) {
   if (error) throw error;
   console.log(results);
   // console.log(results[1].email);
+  // console.log(results.length);
 });
 
 -- select time function 
