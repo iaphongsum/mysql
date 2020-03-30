@@ -84,6 +84,26 @@ connection.query(q, function (error, results, fields) {
 });
 
 
+-- inserting data take 2
+
+const mysql = require('mysql');
+const faker = require('faker');
+ 
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  password :  'password',
+  user     : 'root',     // your root username
+  database : 'join_us'   // the name of your db
+});
+
+const person = {email: "Jenny467@gmail.com"} 
+
+connection.query('INSERT INTO USERS SET ?', person, function (error, results, fields) {
+  if (error) throw error;
+  console.log(results);
+}
+);
+
 connection.end();
 
 -- if the above js not working, try reboot mysql by "sudo service mysql start" in the CL
