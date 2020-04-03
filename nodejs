@@ -4,7 +4,7 @@ node app.js
 -- install node js
 sudo apt-get install npm
 
--- install faker
+-- install 
 npm install faker
 
 -- when encoutner 
@@ -96,7 +96,8 @@ var connection = mysql.createConnection({
   database : 'join_us'   // the name of your db
 });
 
-const person = {email: "Jenny467@gmail.com"} 
+// const person = {email: "Jenny467@gmail.com"} 
+const person = {email: faker.internet.email()} ;
 
 connection.query('INSERT INTO USERS SET ?', person, function (error, results, fields) {
   if (error) throw error;
@@ -104,7 +105,15 @@ connection.query('INSERT INTO USERS SET ?', person, function (error, results, fi
 }
 );
 
+// console.log(faker.date.post());
+
 connection.end();
+
+-- 
+
+
+
+
 
 -- if the above js not working, try reboot mysql by "sudo service mysql start" in the CL
 -- to debug, see:
