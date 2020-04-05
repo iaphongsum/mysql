@@ -127,8 +127,26 @@ connection.query('INSERT INTO USERS SET ?', person, function (error, results, fi
 
 // console.log(end_result.sql);
 
-
 // console.log(faker.date.past());
+
+
+// * insert 500 email & created_at at once!!
+
+const data = [];
+for(let i = 0; i < 500; i++){
+    data.push([
+        faker.internet.email(),
+        faker.date.past()
+    ]);
+}
+ 
+ 
+const q = 'INSERT INTO users (email, created_at) VALUES ?';
+ 
+connection.query(q, [data], function(err, result) {
+  console.log(err);
+  console.log(result);
+});
 
 connection.end();
 
