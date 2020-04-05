@@ -97,13 +97,36 @@ var connection = mysql.createConnection({
 });
 
 // const person = {email: "Jenny467@gmail.com"} 
-const person = {email: faker.internet.email()} ;
+const person = {
+    email: faker.internet.email(),
+    created_at: faker.date.past()
+} ;
+
 
 connection.query('INSERT INTO USERS SET ?', person, function (error, results, fields) {
   if (error) throw error;
   console.log(results);
 }
 );
+
+
+// * see what is behind the scenes
+
+// const person = {
+//     email: faker.internet.email(),
+//     created_at: faker.date.past()
+// } ;
+
+//console.log(person);
+
+// const end_result= connection.query('INSERT INTO users SET ?', person, function (error, results, fields) {
+//   if (error) throw error;
+//   console.log(results);
+// }
+// );
+
+// console.log(end_result.sql);
+
 
 // console.log(faker.date.past());
 
