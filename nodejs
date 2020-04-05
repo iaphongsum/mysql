@@ -105,7 +105,7 @@ connection.query('INSERT INTO USERS SET ?', person, function (error, results, fi
 }
 );
 
-// console.log(faker.date.post());
+// console.log(faker.date.past());
 
 connection.end();
 
