@@ -1,0 +1,13 @@
+-- in mysql, select table and output as file to a directory
+
+SELECT 'ColName1', 'ColName2', 'ColName3'
+UNION ALL
+SELECT ColName1, ColName2, ColName3
+    FROM YourTable
+    INTO OUTFILE '/path/outfile'
+
+
+-- in terminal, copy the file to a downloadable destination
+
+scp mytable.csv /workspace/mysql/mytable_2.csv
+
