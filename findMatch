@@ -1,0 +1,3 @@
+SELECT * from `my-networking-playground3.0_3_Regional.Websites_APR2020_Regional` 
+       where WEBSITE in
+       (select Domain from `my-networking-playground3.0_3_Regional.preferred_media`);
